@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Party Planner</title>
+    <title>Digital Party Planner</title>
 </head>
 <body>
-    <h1>Select Your Party Items</h1>
-    <form action="party_result.php" method="post">
+    <h2>Select Your Party Items</h2>
+    <form action="party_result.php" method="get">
+        <p>Select one or more party items:</p>
         <?php
         $items = [
             "Cake", "Balloons", "Music System", "Lights", "Catering Service", "DJ", "Photo Booth",
             "Tables", "Chairs", "Drinks", "Party Hats", "Streamers", "Invitation Cards", "Party Games", "Cleaning Service"
         ];
-
         foreach ($items as $index => $item) {
-            echo "<input type='checkbox' name='items[]' value='$index'> $index: $item<br>";
+            echo "<label><input type='checkbox' name='items[]' value='$index'> $item</label><br>";
         }
         ?>
         <br>
